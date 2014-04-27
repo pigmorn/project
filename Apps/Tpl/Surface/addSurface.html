@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!--上传文件页面-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>后台管理</title>
+		<link href='{$Think.config.__PUBLIC__}/css/reset.css' type="text/css" rel="stylesheet">
+		<link href="{$Think.config.__PUBLIC__}/css/houtai.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="header">
+			<div class='head'>
+				<div class="logo">AutoTemplates</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Surface/index')}">
+					<img src="{$Think.config.__PUBLIC__}/images/one.png"><br>
+					<p>界面管理</p>
+					</a>
+				</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Single/viewSingle')}">
+					<img src="{$Think.config.__PUBLIC__}/images/two.png"><br>
+					<p>内容管理</p>
+					</a>
+				</div>
+				<div class="top">
+					<span class="topSpan">您好,admin!</span>
+					<span class="topSpan"><a href="#">退出</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="middle">
+			<!-- 			<div class="jianbian">
+			</div> -->
+			<div class="content">
+				<div class="left">
+					<div class="index"><a href="{$Think.config.__PUBLIC__}/Uploads/website/{$folder}/index.php?color={$color}&path={$Think.config.__MENUXML__}">网站首页</a></div>
+					<ul class="uLeft">
+						<li><a href="{:U(APP_PATH.'Surface/index')}">界面风格</a></li>
+						<li><a href="{:U(APP_PATH.'Menu/index')}">模块设置</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="rightop">
+						<img src="{$Think.config.__PUBLIC__}/images/map.png">
+						<p>当前位置：</p>
+						<a href="#">网站设置</a> <p>></p>
+						<a href="#">界面管理</a> <p>></p>
+						<a href="#">界面风格</a>
+					</div>
+					<!-- 					<div class="rightmid">
+							<div class="menu">模块管理</div>
+							<div class="menu"></div>
+							<div class="menu"></div>
+					</div> -->
+					<!--内容-->
+					<div class="mid">
+						<form action="{:U(APP_PATH.'/Home/Surface/runAdd')}" method="post"enctype="multipart/form-data">
+							<div class="midContent">
+							<p>
+							<span class='text'>模版名称：</span>
+							<input type="text" name="title" />
+							</p>
+							<p>
+							<span class='text'>模版上传:</span>
+							<input type="file" name="folder" />
+							<span class='tip'>仅支持zip格式，上传后记得点保存</span>
+							</p>
+							<!-- 文件夹：<input type="file" name="imgFile">只能上传压缩格式<br> -->
+							<p>
+							<span class='text'>预览图：</span>
+							<input type="file" name="imgFile">
+							<span class='tip'>支持png，psd，jpg，jpeg，pjpeg,gif</span>
+							</p>
+							<p>
+							<span class='text'>信息描述：</span>
+							<input type="text" name="explain">
+							</p>
+							<p>
+							<span class='text'>选择风格：</span>
+							<SELECT name="style">
+								<option value="red">红色</option>
+								<option value="blue">蓝色</option>
+								<option value="yellow">黄色</option>
+							</SELECT>
+							</p>
+							<div>
+								<input type="submit" class='btn' value="保存">
+								<input type="reset" class='btn' value="重置">
+							</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

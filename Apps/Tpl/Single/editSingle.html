@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--上传文件页面-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>后台管理</title>
+		<link href='{$Think.config.__PUBLIC__}/css/reset.css' type="text/css" rel="stylesheet">
+		<link href="{$Think.config.__PUBLIC__}/css/houtai.css" type="text/css" rel="stylesheet">
+		<!-- 配置文件 -->
+		<script type="text/javascript" src="{$Think.config.__PUBLIC__}/data/ueditor/ueditor.config.js"></script>
+		<!-- 编辑器源码文件 -->
+		<script type="text/javascript" src="{$Think.config.__PUBLIC__}/data/ueditor/ueditor.all.js"></script>
+		<!-- 语言包文件(建议手动加载语言包，避免在ie下，因为加载语言失败导致编辑器加载失败) -->
+		<script type="text/javascript" src="{$Think.config.__PUBLIC__}/data/ueditor/lang/zh-cn/zh-cn.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="head">
+				<div class="logo">AutoTemplates</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Surface/index')}">
+					<img src="{$Think.config.__PUBLIC__}/images/one.png"><br>
+					<p>界面管理</p>
+					</a>
+				</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Single/viewSingle')}">
+					<img src="{$Think.config.__PUBLIC__}/images/two.png"><br>
+					<p>内容管理</p>
+					</a>
+				</div>
+				<div class="top">
+					<span class="topSpan">您好,admin!</span>
+					<span class="topSpan"><a href="#">退出</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="middle">
+			<!-- 			<div class="jianbian">
+			</div> -->
+			<div class="content">
+				<div class="left">
+					<div class="index"><a href="{$Think.config.__PUBLIC__}/Uploads/website/{$folder}/index.php?color={$color}&path={$Think.config.__MENUXML__}">网站首页</a></div>
+					<ul class="uLeft">
+						<li><a href="{:U(APP_PATH.'Single/viewSingle')}">单页模块</a></li>
+						<li><a href="#">列表模块</a></li>
+						<li><a href="#">图片模块</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="rightop">
+						<img src="{$Think.config.__PUBLIC__}/images/map.png">
+						<p>当前位置：</p>
+						<a href="#">网站设置</a> <p>></p>
+						<a href="#">内容管理</a> <p>></p>
+						<a href="#">单页模块</a>
+					</div>
+					<div class="mid">
+						<form action="{:U(APP_PATH.'/Single/addSingle')}" method="post"enctype="multipart/form-data">
+							<div class="midContent">
+							<p>
+							<span class='text'>所属栏目：</span>
+							<SELECT name="cate">
+							<?php foreach($menu as $v){
+
+								
+						
+								if($editdataSingle[0]['cate'] ==$v['name']){
+										
+									?>
+									<option value="{$v.name}" selected>{$v.name}</option>
+								<?php }else{
+									?><option value="{$v.name}">{$v.name}</option><?php }
+								}?>
+							
+
+								
+							
+							</SELECT>
+							</p>
+							<p>
+							<span class='text'>标题:</span>
+							<input type="text" name="title" value="{$editdataSingle[0].title}"/>{$data.title}
+							<!-- <span class='tip'>仅支持zip格式，上传后记得点保存</span> -->
+							</p>
+							<p class="textareap">
+							<span class='span'>详细内容：</span>
+						<!-- 	<textarea class="textarea" id="Ueditor" cols="80" rows="10"> -->
+							</textarea>
+							<script id="Ueditor" name="content" type="text/plain" style="width:800px;height:440px;">{$editdataSingle[0].content}
+							</script>
+							<script type="text/javascript">
+							    var editor = UE.getEditor('Ueditor');
+							</script>
+							</p>
+							</div>
+							<div class="button">
+								<input type="submit" class='btn' value="保存">
+								<input type="reset" class='btn' value="重置">
+							</div>
+							
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,179 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	font-family:微软雅黑;}
+a{
+	text-decoration:none;}
+body{
+	background-color:#f8f8f8;
+	}
+
+#wrap{
+	width:960px;
+	margin:10px auto 0;
+	position:relative;
+	overflow:hidden;
+	zoom:1;
+	}
+#logo{padding-left:15px;
+	padding-top: 20px;
+height:56px;}
+#nav{
+	margin:20px auto 0;
+	padding-left:59px;
+	background:url(../images/nav_bg.png) no-repeat;
+	width:960px;
+	height:54px;
+	position:relative;
+	z-index:2;
+}
+#nav a,#nav_bg a{
+	color:#FFF;
+	font-size:16px;
+	font-weight:bold;
+	height:50px;
+	display:block;
+	float:left;
+	width:100px;
+	text-align:center;
+	line-height:38px;
+	z-index:31;
+	text-shadow: 1px 1px 1px #000;
+	-webkit-transition: 0.4s all ease;
+	-moz-transition: 0.4s all ease;
+	-ms-transition: 0.4s all ease;
+	-o-transition: 0.4s all ease;
+	transition: 0.4s all ease;
+	margin-right:2px;
+	margin:0 3px 0 5px;
+}
+#nav span,#nav_bg span{
+	display:block;
+	float:left;
+	background-color:#FFF;
+	width:1px;
+	height:20px;
+	vertical-align:top;
+	margin:10px 0px 0 0px;
+	}
+#nav_bg{
+	width:105px;
+	height:54px;
+	overflow:hidden;
+	background:url(../images/block_hover.png) no-repeat 5px 0;
+	position:absolute;
+	left:65px;
+	top:95px;
+	z-index:2;
+	}
+#nav_bg div{
+	width:960px;
+	position:absolute;
+	top:0;
+	left:0;}
+#banner{
+	width:960px;
+	height:180px;
+	margin:0px auto 0;
+	position:relative;
+	overflow:hidden;
+	}
+#left{
+	width:240px;
+	height:630px;
+	border-right:1px solid #ccc;
+	margin:14px 0 0 0;
+	float:left;
+	background-color:#FFF;
+	}
+.title{
+	background:url(../images/title.jpg) no-repeat;
+	display:block;
+	width:200px;
+	height:28px;
+	color:#FFF;
+	font-size:16px;
+	font-weight:bold;
+	line-height:28px;
+	text-indent:38px;
+	margin:14px 0 0 32px;
+	}	
+#left ul{
+	width:200px;
+	margin-left:36px;
+	}
+#left li{
+	background:url(../images/dota.png) no-repeat 8px 6px;
+	height:25px;
+	line-height:25px;
+	text-indent:36px;
+	}
+#left a{
+	color:#333;
+	font-size:14px;
+	}
+#left a:hover{
+	color:#000;
+	text-decoration:underline;
+	}
+	
+#right{
+	margin:14px 0 0 0;
+	float:right;
+	height:630px;
+	width:718px;
+	background-color:#FFF;
+	}
+#right{
+	width:718px;
+	border-right:1px solid #0FF;
+	}
+#content .neirong{
+	width: 700px;
+	height: 500px;
+	margin: 0px 0px 0px 10px;
+}
+#content p{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+#title{
+	width:100%;
+	font-size:18px;
+	font-weight:bold;
+	display:block;
+	text-align:center;
+	margin-top:30px;
+	}
+.publish{
+	font-size:14px;
+	color:#666;
+	display:block;
+	text-align:center;
+	line-height:30px;
+	
+	}
+#footer{
+	clear:both;
+	width:960px;
+	height:90px;
+	text-align:center;
+	background-color:#FFF;
+	margin:4px auto 0;
+}
+#footer a{
+	margin:20px 6px 0 0;
+	color:#00C;
+	font-size:12px;
+	display:inline-block;
+	}
+#footer a:hover{
+	color:#F30;
+	}
+#footer span{
+	color:#666;
+	font-size:12px;
+	margin-top:10px;
+	display:block;
+	}
+

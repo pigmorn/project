@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--上传文件页面-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>后台管理</title>
+		<link href='{$Think.config.__PUBLIC__}/css/reset.css' type="text/css" rel="stylesheet">
+		<link href="{$Think.config.__PUBLIC__}/css/houtai.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<div id="header">
+			<div class="head">
+				<div class="logo">AutoTemplates</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Surface/index')}">
+					<img src="{$Think.config.__PUBLIC__}/images/one.png"><br>
+					<p>界面管理</p>
+					</a>
+				</div>
+				<div class="manage">
+					<a href="{:U(APP_PATH.'Single/viewSingle')}">
+					<img src="{$Think.config.__PUBLIC__}/images/two.png"><br>
+					<p>内容管理</p>
+					</a>
+				</div>
+				<div class="top">
+					<span class="topSpan">您好,admin!</span>
+					<span class="topSpan"><a href="#">退出</a></span>
+				</div>
+			</div>
+		</div>
+		<div class="middle">
+			<!-- 			<div class="jianbian">
+			</div> -->
+			<div class="content">
+				<div class="left">
+					<div class="index"><a href="{$Think.config.__PUBLIC__}/Uploads/website/{$folder}/index.php?color={$color}&path={$Think.config.__MENUXML__}">网站首页</a></div>
+					<ul class="uLeft">
+						<li><a href="{:U(APP_PATH.'Surface/index')}">界面风格</a></li>
+						<li><a href="#">栏目设置</a></li>
+					</ul>
+				</div>
+				<div class="right">
+					<div class="rightop">
+						<img src="{$Think.config.__PUBLIC__}/images/map.png">
+						<p>当前位置：</p>
+						<a href="#">网站设置</a> <p>></p>
+						<a href="#">界面管理</a> <p>></p>
+						<a href="#">栏目设置</a>
+					</div>
+					<!-- 					<div class="rightmid">
+							<div class="menu">模块管理</div>
+							<div class="menu"></div>
+							<div class="menu"></div>
+					</div> -->
+					<!--内容-->
+					<div class="mid">
+						<form action="{:U(APP_PATH.'/Surface/tiaozhuan')}" method="post"enctype="multipart/form-data">
+							<table class="table">
+								<tr id="trOne">
+									<td style="width:60px;height:40px;">排序</td>
+									<td style="height:40px;">栏目名称</td>
+									<td style="height:40px;">所属模块</td>
+									<td style="height:40px;">级别</td>
+									<td style="width:260px;height:40px;">操作</td>
+								</tr>
+								<foreach name="menu" item="v">
+								<tr>
+									<td style="width:60px">
+										{$v.sort}
+									<!-- 	<input type="text" name="sort" value="{$v.sort}" style="width:100px;"/> -->
+										<input type="hidden" name="id" value="{$v.id}">
+									</td>
+									<td>
+										<!-- <input type="text" name="menu" value="{$v.name}"/> -->
+										
+										{$v.html}{$v.name}
+									</td>
+									<td >
+										<span>{$v.zhonglei}</span>
+									</td>
+									<td >
+										<!-- <input type="text" name="level" value="{$v.level}" /> -->
+										{$v.level}
+									</td>
+									<td style="width:260px">
+										<a href="{:U(APP_PATH.'/Menu/addMenu')}?pid={$v.id}">[添加子栏目]</a>
+										<a href="{:U(APP_PATH.'/Menu/editMenu')}?id={$v.id}">[编辑]</a>
+										<a href="{:U(APP_PATH.'/Menu/delMenu',array('id' =>$v['id']))}">[删除]</a>
+									</td>
+								</tr>
+								</foreach>
+								<tr>
+									<td colspan="5" align="left"><a href="{:U(APP_PATH.'/Menu/addMenu')}"><span class="add">+添加一级菜单</span></a></td>
+								</tr>
+								<tr>
+									<td colspan="5" style="height:40px;">
+										<input type="submit" name="interfaceSub" value="确定" style="width:70px;height:25px;">
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

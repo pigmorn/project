@@ -1,0 +1,66 @@
+[ 2014-04-26T20:33:16+08:00 ] 127.0.0.1 /templates/index.php/Temp/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002408s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002542s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001536s ]
+NOTIC: [8] Undefined index: folder C:\wamp\www\templates\Apps\Lib\Action\MenuAction.class.php 第 16 行.
+NOTIC: [8] Undefined index: color C:\wamp\www\templates\Apps\Lib\Action\MenuAction.class.php 第 17 行.
+SQL: SHOW COLUMNS FROM `tmp_menu` [ RunTime:0.005104s ]
+SQL: SELECT * FROM `tmp_menu` ORDER BY sort asc  [ RunTime:0.000584s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: path C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 20 行.
+NOTIC: [2] simplexml_load_file() [<a href='function.simplexml-load-file'>function.simplexml-load-file</a>]: I/O warning : failed to load external entity &quot;menu.xml&quot; C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 20 行.
+NOTIC: [8] Trying to get property of non-object C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 20 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 20 行.
+NOTIC: [8] Trying to get property of non-object C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 38 行.
+NOTIC: [2] Invalid argument supplied for foreach() C:\wamp\www\templates\Runtime\Cache\04757d99bb338e482335f9e7e5bad15d.php 第 38 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019272s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019360s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001159s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001530s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001653s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001268s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005831s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001113s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001174s ]
+
+[ 2014-04-26T20:33:16+08:00 ] 127.0.0.1 /templates/index.php/Temp/css/index_red.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001604s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001733s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.005424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005541s ]
+ERR: 非法操作:css
+
+[ 2014-04-26T20:33:16+08:00 ] 127.0.0.1 /templates/index.php/Temp/css/reset.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002939s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003078s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001791s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001920s ]
+ERR: 非法操作:css
+
+[ 2014-04-26T20:33:16+08:00 ] 127.0.0.1 /templates/index.php/Temp/js/move.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.004322s ]
+INFO: [ route_check ] --END-- [ RunTime:0.004456s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001652s ]
+ERR: 非法操作:js
+
+[ 2014-04-26T20:33:16+08:00 ] 127.0.0.1 /templates/index.php/Temp/js/index_1.js
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002674s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002815s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001941s ]
+ERR: 非法操作:js
+
